@@ -1,135 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width'>
-    <title>Privacy Policy</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Privacy Policy - Creativix</title>
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #2c3e50;
+            --heading-color: #1a252f;
+            --card-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --primary-color: #3b82f6;
+            --code-bg: #edf2f7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121824;
+                --text-color: #cbd5e1;
+                --heading-color: #f1f5f9;
+                --card-bg: #1e293b;
+                --border-color: #334155;
+                --primary-color: #60a5fa;
+                --code-bg: #0f172a;
+            }
+        }
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            padding: 1em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 1.5rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 1.85rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.35rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            color: var(--heading-color);
+            font-size: 1.1rem;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p, ul, ol {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 0.15rem 0.35rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        .highlight-box {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 1.25rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .effective-date {
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 
 <body>
-    <strong>Privacy Policy</strong>
-    <p>This privacy policy applies to the Creativix app (hereby referred to as "Application") for mobile devices that
-        was created by Neural Wave (hereby referred to as "Service Provider") as a Free service. This service is
-        intended for use "AS IS".</p><br><strong>Information Collection and Use</strong>
-    <p>The Application collects information when you download and use it. This information may include information such
-        as </p>
-    <ul>
-        <li>Your device's Internet Protocol address (e.g. IP address)</li>
-        <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages
-        </li>
-        <li>The time spent on the Application</li>
-        <li>The operating system you use on your mobile device</li>
-        <li>Your device's mobile advertising identifier (Apple IDFA on iOS, Google Advertising ID on Android), used solely for install attribution as described in the &ldquo;Mobile Advertising Identifiers and Install Attribution&rdquo; section below</li>
-    </ul>
-    <p></p><br>
-    <p>The Application does not gather precise information about the location of your mobile device.</p><!----><br>
-    <p>The Application uses Artificial Intelligence (AI) technologies to enhance user experience and provide certain
-        features. The AI components may process user data to deliver personalized content, recommendations, or automated
-        functionalities. All AI processing is performed in accordance with this privacy policy and applicable laws. If
-        you have questions about the AI features or data processing, please contact the Service Provider.</p><br>
-    <p>The Service Provider may use the information you provided to contact you from time to time to provide you with
-        important information, required notices and marketing promotions.</p><br>
-    <p>For a better experience, while using the Application, the Service Provider may require you to provide us with
-        certain personally identifiable information, including but not limited to email, userId. The information that
-        the Service Provider request will be retained by them and used as described in this privacy policy.</p>
-    <br><strong>Mobile Advertising Identifiers and Install Attribution</strong>
-    <p>The Application uses <strong>Tenjin</strong> (operated by Tenjin, Inc., <a href="https://www.tenjin.com">https://www.tenjin.com</a>),
-        a Mobile Measurement Partner (MMP), to understand which advertising campaigns or referral sources brought users
-        to install the Application. This is called &ldquo;install attribution&rdquo; and is the only purpose for which
-        the Application uses your mobile advertising identifier.</p><br>
-    <p>What is collected and shared with Tenjin:</p>
-    <ul>
-        <li><strong>Apple IDFA</strong> (Identifier for Advertisers) on iOS, only if you grant permission via the system
-            &ldquo;App Tracking Transparency&rdquo; prompt</li>
-        <li><strong>Google Advertising ID (GAID)</strong> on Android, unless you have enabled &ldquo;Limit Ad
-            Tracking&rdquo; / &ldquo;Opt out of Ads Personalization&rdquo; in your device settings</li>
-        <li><strong>Device-level information</strong>: device model, operating system version, language, country,
-            install timestamp</li>
-        <li><strong>Anonymous in-app events</strong> that help us understand which marketing channels deliver users who
-            actually engage with the Application (for example: <code>signup_complete</code>, <code>first_chat</code>,
-            <code>paywall_view</code>)</li>
-    </ul>
-    <p>What is <strong>not</strong> collected for advertising purposes:</p>
-    <ul>
-        <li>Your real name, email address, or phone number</li>
-        <li>The contents of your chats or files</li>
-        <li>Any payment card information</li>
-    </ul>
-    <p>How to control this:</p>
-    <ul>
-        <li><strong>iOS</strong>: when the Application first launches you will see Apple's &ldquo;App Tracking
-            Transparency&rdquo; prompt. Tapping &ldquo;Ask App Not to Track&rdquo; disables IDFA-based attribution. You
-            can change this anytime in Settings &rarr; Privacy &amp; Security &rarr; Tracking.</li>
-        <li><strong>Android</strong>: open the Google Settings app &rarr; Ads &rarr; enable &ldquo;Opt out of Ads
-            Personalization&rdquo; (or reset your Advertising ID). On Android 13+ the Application uses the standard
-            <code>AD_ID</code> permission, which the system can also revoke.</li>
-        <li><strong>In-app</strong>: users in regions covered by GDPR (EU/EEA, UK, Switzerland) or CCPA (California)
-            see a Consent dialog the first time the Application launches and can revoke or re-affirm their choice
-            anytime via Settings &rarr; Consent. Users outside these regions are not shown the dialog because their
-            applicable laws do not require it; they may still control attribution via the OS-level settings above.</li>
-    </ul>
-    <p>Tenjin's own privacy practices, retention periods, and contact information for data deletion requests are
-        documented at <a href="https://www.tenjin.com/privacy-policy">https://www.tenjin.com/privacy-policy</a>. Data
-        deletion requests specific to Tenjin can be sent to <a
-            href="mailto:privacy@tenjin.com">privacy@tenjin.com</a>.</p>
-    <br><strong>Third Party Access</strong>
-    <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in
-        improving the Application and their service. The Service Provider may share your information with third parties
-        in the ways that are described in this privacy statement.</p><!----><br>
-    <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
-    <ul>
-        <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
-        <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or
-            the safety of others, investigate fraud, or respond to a government request;</li>
-        <li>with their trusted services providers who work on their behalf, do not have an independent use of the
-            information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.
-        </li>
-    </ul>
-    <p></p><br><strong>Opt-Out Rights</strong>
-    <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard
-        uninstall processes as may be available as part of your mobile device or via the mobile application marketplace
-        or network.</p><br><strong>Data Retention Policy</strong>
-    <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable
-        time thereafter. To protect your privacy and manage storage, the Application employs an automatic data cleanup mechanism:</p>
-    <ul>
-        <li>Created data from Chatbot will be automatically deleted after 30 days.</li>
-        <li>Created data from Studio will be automatically deleted after 7 days.</li>
-    </ul>
-    <p>If you'd like them to delete User Provided Data that you have provided via the Application sooner,
-        please contact them at neuralwavescience@gmail.com and they will respond in a reasonable time.</p>
-    <br><strong>Children</strong>
-    <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the
-        age of 13.</p>
-    <div bis_skin_checked="1"><br>
-        <p>The Service Provider does not knowingly collect personally identifiable information from children. The
-            Service Provider encourages all children to never submit any personally identifiable information through the
-            Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their
-            children's Internet usage and to help enforce this Policy by instructing their children never to provide
-            personally identifiable information through the Application and/or Services without their permission. If you
-            have reason to believe that a child has provided personally identifiable information to the Service Provider
-            through the Application and/or Services, please contact the Service Provider
-            <span>(neuralwavescience@gmail.com)</span> so that they will be able to take the necessary actions. You must
-            also be at least 16 years of age to consent to the processing of your personally identifiable information in
-            your country (in some countries we may allow your parent or guardian to do so on your behalf).</p>
-    </div><br><strong>Security</strong>
-    <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service
-        Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider
-        processes and maintains.</p><br><strong>Changes</strong>
-    <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any
-        changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this
-        Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p><br>
-    <p>This privacy policy is effective as of 2026-04-16</p><br><strong>Your Consent</strong>
-    <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy
-        Policy now and as amended by us.</p><br><strong>Contact Us</strong>
-    <p>If you have any questions regarding privacy while using the Application, or have questions about the practices,
-        please contact the Service Provider via email at neuralwavescience@gmail.com.</p>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Last Updated & Effective Date: August 19, 2026</p>
+
+        <p>This Privacy Policy explains how <strong>Neural Wave</strong> ("Service Provider", "we", "us", or "our") collects, uses, processes, and protects your information when you use the <strong>Creativix</strong> mobile application (the "Application").</p>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>A. Information You Provide Directly</h3>
+        <ul>
+            <li><strong>Account Information:</strong> When you sign up or log in (via Email, Google Sign-In, or Apple Sign-In), we collect your email address, unique user ID (<code>userId</code>), and public display name.</li>
+            <li><strong>User Content:</strong> Text prompts, chat messages, input images, and media files you upload to use our AI chat, image, or video generation features.</li>
+            <li><strong>Customer Support & Feedback:</strong> Any correspondence, bug reports, or feature requests you submit to us.</li>
+        </ul>
+
+        <h3>B. Automatically Collected Information</h3>
+        <ul>
+            <li><strong>Device & Usage Information:</strong> Device model, operating system version, unique device identifiers, IP address, coarse country/region, app version, language preference, and in-app usage timestamps.</li>
+            <li><strong>Crash & Performance Logs:</strong> Diagnostic information, stack traces, and non-fatal error reports collected when the Application encounters an issue.</li>
+            <li><strong>Mobile Advertising Identifiers:</strong> Apple IDFA (iOS) and Google Advertising ID (Android), used solely for install attribution as described in Section 4.</li>
+        </ul>
+
+        <h2>2. Device Permissions and How We Use Them</h2>
+        <p>To provide core creative features, the Application may request the following device permissions:</p>
+        <ul>
+            <li><strong>Camera:</strong> Used to take photos for document scanning, optical character recognition (OCR), or as visual references for AI generation.</li>
+            <li><strong>Photo Library / Storage:</strong> Used to allow you to select images/videos for AI processing and to save generated artwork or exported media to your device.</li>
+            <li><strong>Microphone / Speech Recognition:</strong> Used exclusively when you choose to use voice input or voice chat features to convert your speech to text.</li>
+            <li><strong>Notifications:</strong> Used to alert you when background tasks (such as intensive video or image generation) are completed.</li>
+        </ul>
+        <p>You can grant, modify, or revoke these permissions at any time via your device's operating system settings.</p>
+
+        <h2>3. Artificial Intelligence & Third-Party Processing</h2>
+        <p>Creativix leverages cutting-edge Artificial Intelligence (AI) models to generate text, images, audio, video, and code.</p>
+        <ul>
+            <li><strong>Cloud AI Processing:</strong> When you submit prompts or input media, they are transmitted via encrypted HTTPS connections to our secure backend and authorized AI infrastructure providers (including OpenAI, Anthropic, Google Gemini, Fal.ai, Runware, Freepik, and Kling) solely to generate the requested output.</li>
+            <li><strong>On-Device Processing:</strong> Features like optical character recognition (OCR) and instant language translation are processed locally on your device using Google ML Kit. Your scanned images for these local features are not sent to external servers.</li>
+        </ul>
+
+        <h2>4. Mobile Advertising Identifiers and Install Attribution</h2>
+        <p>The Application uses <strong>Tenjin</strong> (operated by Tenjin, Inc., <a href="https://www.tenjin.com" target="_blank" rel="noopener">https://www.tenjin.com</a>), a Mobile Measurement Partner (MMP), to understand marketing campaign effectiveness and install attribution.</p>
+        <ul>
+            <li><strong>Apple IDFA (iOS):</strong> Collected only if you explicitly permit tracking via Apple's App Tracking Transparency (ATT) prompt.</li>
+            <li><strong>Google Advertising ID (GAID - Android):</strong> Collected unless you enable "Opt out of Ads Personalization" or reset your Advertising ID in Android settings.</li>
+            <li><strong>Anonymous Event Data:</strong> Non-identifiable milestone events (e.g., <code>signup_complete</code>, <code>first_chat</code>, <code>paywall_view</code>).</li>
+        </ul>
+        <p>Tenjin does not receive your real name, email address, chat contents, prompts, or generated files. Tenjin's privacy practices can be reviewed at <a href="https://www.tenjin.com/privacy-policy" target="_blank" rel="noopener">https://www.tenjin.com/privacy-policy</a>.</p>
+
+        <h2>5. Analytics and Crash Reporting</h2>
+        <p>The Application uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> (provided by Google LLC) to diagnose crashes and evaluate aggregate feature usage:</p>
+        <ul>
+            <li><strong>Firebase Analytics:</strong> Collects anonymous app instance IDs, internal user IDs, feature engagement metadata, and device properties. Analytics collection is strictly gated behind our in-app Consent mechanism and can be opted out of at any time via <strong>Settings &rarr; Tracking &amp; Privacy</strong>.</li>
+            <li><strong>Firebase Crashlytics:</strong> Collects anonymized stack traces and device operating metrics during unexpected application crashes. Crash reports contain no chat prompts, generated media, or personal contact details.</li>
+        </ul>
+        <p>Firebase data is processed in accordance with Google's <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</p>
+
+        <h2>6. In-App Purchases and Payment Information</h2>
+        <p>Creativix offers consumable Premium access packs and Credit packages. <strong>All financial transactions are handled directly and securely by the Apple App Store (iOS) or Google Play Store (Android).</strong></p>
+        <p>The Service Provider never collects, sees, or stores your credit card numbers, bank details, or billing addresses. We only receive an anonymous transaction receipt/token to verify purchase authenticity and credit your account.</p>
+
+        <h2>7. Data Retention and Automatic Cleanup</h2>
+        <p>To respect your privacy and manage storage efficiently, the Application applies an automated data cleanup schedule:</p>
+        <ul>
+            <li><strong>Chatbot Conversations:</strong> Created conversation sessions and message history are automatically deleted after <strong>30 days</strong>.</li>
+            <li><strong>Studio Creations:</strong> Generated images, videos, and studio project outputs are automatically deleted from server storage after <strong>7 days</strong>. We encourage you to download and save your favorite creations to your device library.</li>
+            <li><strong>Account Data:</strong> Retained for as long as your account remains active.</li>
+        </ul>
+
+        <h2>8. Account Deletion and User Rights</h2>
+        <p>You have full control over your personal information:</p>
+        <ul>
+            <li><strong>In-App Account Deletion:</strong> You can delete your account and all associated data at any time directly within the Application by navigating to <strong>Settings &rarr; Account &rarr; Delete Account</strong>.</li>
+            <li><strong>What Happens Upon Deletion:</strong> Deleting your account immediately and permanently purges your authentication profile, user settings, chat history, studio projects, uploaded media, and any remaining credit balances from our active databases. This action is irreversible.</li>
+            <li><strong>GDPR & CCPA Rights:</strong> Depending on your jurisdiction (such as the EU/EEA, UK, or California), you have the right to request access to, rectification of, portability of, or erasure of your personal data, as well as the right to withdraw consent. You may exercise these rights directly in the app or by emailing us.</li>
+        </ul>
+
+        <h2>9. Fair Use and Account Integrity</h2>
+        <p>All high-capacity and generative features are intended for authentic, human-directed creative use. Headless automation, mass scraping, continuous bot generation, or unauthorized reverse engineering is strictly prohibited. We monitor traffic patterns to maintain service quality for all users and reserve the right to limit access or terminate accounts found abusing system resources.</p>
+
+        <h2>10. Children's Privacy</h2>
+        <p>The Application is not directed to children under the age of 13 (or under 16 in certain jurisdictions). We do not knowingly solicit or collect personally identifiable information from children. If we learn that a child has provided us with personal information without parental consent, we will promptly delete such information.</p>
+
+        <h2>11. Data Security</h2>
+        <p>We employ standard electronic, physical, and procedural security measures, including SSL/TLS encryption for all data in transit and row-level security (RLS) policies on our databases, to safeguard your information from unauthorized access, disclosure, or alteration.</p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When changes are made, we will update the "Last Updated" date at the top of this page. Continued use of the Application after any modifications indicates your acceptance of the updated terms.</p>
+
+        <h2>13. Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+        <p><strong>Neural Wave</strong><br>
+        Email: <a href="mailto:neuralwavescience@gmail.com">neuralwavescience@gmail.com</a></p>
+    </div>
 </body>
 
 </html>
