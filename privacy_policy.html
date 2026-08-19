@@ -12,12 +12,26 @@
             --heading-color: #1a252f;
             --card-bg: #f8fafc;
             --border-color: #e2e8f0;
-            --primary-color: #3b82f6;
+            --primary-color: #2563eb;
             --code-bg: #edf2f7;
+            --btn-bg: #e2e8f0;
+            --btn-text: #1e293b;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-color: #121824;
+            --text-color: #cbd5e1;
+            --heading-color: #f1f5f9;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --primary-color: #60a5fa;
+            --code-bg: #0f172a;
+            --btn-bg: #334155;
+            --btn-text: #f1f5f9;
         }
 
         @media (prefers-color-scheme: dark) {
-            :root {
+            :root:not([data-theme="light"]) {
                 --bg-color: #121824;
                 --text-color: #cbd5e1;
                 --heading-color: #f1f5f9;
@@ -25,6 +39,8 @@
                 --border-color: #334155;
                 --primary-color: #60a5fa;
                 --code-bg: #0f172a;
+                --btn-bg: #334155;
+                --btn-text: #f1f5f9;
             }
         }
 
@@ -35,6 +51,7 @@
             background-color: var(--bg-color);
             margin: 0;
             padding: 1.5rem 1rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
         }
 
         .container {
@@ -42,12 +59,38 @@
             margin: 0 auto;
         }
 
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
         h1 {
             color: var(--heading-color);
             font-size: 1.85rem;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
+            margin: 0;
+        }
+
+        .theme-toggle-btn {
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            opacity: 0.85;
         }
 
         h2 {
@@ -112,7 +155,12 @@
 
 <body>
     <div class="container">
-        <h1>Privacy Policy</h1>
+        <div class="header-row">
+            <h1>Privacy Policy</h1>
+            <button id="themeToggle" class="theme-toggle-btn" type="button" onclick="toggleTheme()">
+                <span id="themeIcon">☀️</span> <span id="themeLabel">Light</span>
+            </button>
+        </div>
         <p class="effective-date">Last Updated & Effective Date: August 19, 2026</p>
 
         <p>This Privacy Policy explains how <strong>Neural Wave</strong> ("Service Provider", "we", "us", or "our") collects, uses, processes, and protects your information when you use the <strong>Creativix</strong> mobile application (the "Application").</p>
@@ -204,6 +252,47 @@
         <p><strong>Neural Wave</strong><br>
         Email: <a href="mailto:neuralwavescience@gmail.com">neuralwavescience@gmail.com</a></p>
     </div>
+
+    <script>
+        function getInitialTheme() {
+            const params = new URLSearchParams(window.location.search);
+            const themeParam = params.get('theme');
+            if (themeParam === 'dark' || themeParam === 'light') {
+                return themeParam;
+            }
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark' || saved === 'light') {
+                return saved;
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const btn = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+            if (icon && label) {
+                if (theme === 'dark') {
+                    icon.textContent = '☀️';
+                    label.textContent = 'Light';
+                } else {
+                    icon.textContent = '🌙';
+                    label.textContent = 'Dark';
+                }
+            }
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || getInitialTheme();
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        }
+
+        const initialTheme = getInitialTheme();
+        applyTheme(initialTheme);
+    </script>
 </body>
 
 </html>
