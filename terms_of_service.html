@@ -1,83 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width'>
-    <title>Terms &amp; Conditions</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Terms &amp; Conditions - Creativix</title>
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #2c3e50;
+            --heading-color: #1a252f;
+            --card-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --primary-color: #3b82f6;
+            --code-bg: #edf2f7;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121824;
+                --text-color: #cbd5e1;
+                --heading-color: #f1f5f9;
+                --card-bg: #1e293b;
+                --border-color: #334155;
+                --primary-color: #60a5fa;
+                --code-bg: #0f172a;
+            }
+        }
+
         body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            padding: 1em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 1.5rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 1.85rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.35rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            color: var(--heading-color);
+            font-size: 1.1rem;
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p, ul, ol {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-box {
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 1.25rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .effective-date {
+            font-style: italic;
+            color: #64748b;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 
 <body>
-    <strong>Terms &amp; Conditions</strong><br>
-    <p>These terms and conditions apply to the Creativix app (hereby referred to as "Application") for mobile devices
-        that was created by Neural Wave (hereby referred to as "Service Provider") as a Free service.</p><br>
-    <p>Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is
-        strongly advised that you thoroughly read and understand these terms prior to using the Application.</p>
-    <div bis_skin_checked="1"><br>
-        <p>Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is
-            strictly prohibited. Any attempts to extract the source code of the Application, translate the Application
-            into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database
-            rights, and other intellectual property rights related to the Application remain the property of the Service
-            Provider.</p>
-    </div><br>
-    <p>The Service Provider is dedicated to ensuring that the Application is as beneficial and efficient as possible. As
-        such, they reserve the right to modify the Application or charge for their services at any time and for any
-        reason. The Service Provider assures you that any charges for the Application or its services will be clearly
-        communicated to you.</p><br>
-    <p>The Application stores and processes personal data that you have provided to the Service Provider in order to
-        provide the Service. It is your responsibility to maintain the security of your phone and access to the
-        Application. The Service Provider strongly advise against jailbreaking or rooting your phone, which involves
-        removing software restrictions and limitations imposed by the official operating system of your device. Such
-        actions could expose your phone to malware, viruses, malicious programs, compromise your phone's security
-        features, and may result in the Application not functioning correctly or at all.</p><!----><br>
-    <p>Please be aware that the Service Provider does not assume responsibility for certain aspects. Some functions of
-        the Application require an active internet connection, which can be Wi-Fi or provided by your mobile network
-        provider. The Service Provider cannot be held responsible if the Application does not function at full capacity
-        due to lack of access to Wi-Fi or if you have exhausted your data allowance.</p><br>
-    <p>If you are using the application outside of a Wi-Fi area, please be aware that your mobile network provider's
-        agreement terms still apply. Consequently, you may incur charges from your mobile provider for data usage during
-        the connection to the application, or other third-party charges. By using the application, you accept
-        responsibility for any such charges, including roaming data charges if you use the application outside of your
-        home territory (i.e., region or country) without disabling data roaming. If you are not the bill payer for the
-        device on which you are using the application, they assume that you have obtained permission from the bill
-        payer.</p><br>
-    <p>Similarly, the Service Provider cannot always assume responsibility for your usage of the application. For
-        instance, it is your responsibility to ensure that your device remains charged. If your device runs out of
-        battery and you are unable to access the Service, the Service Provider cannot be held responsible.</p><br>
-    <p>In terms of the Service Provider's responsibility for your use of the application, it is important to note that
-        while they strive to ensure that it is updated and accurate at all times, they do rely on third parties to
-        provide information to them so that they can make it available to you. The Service Provider accepts no liability
-        for any loss, direct or indirect, that you experience as a result of relying entirely on this functionality of
-        the application.</p><br>
-    <div bis_skin_checked="1">
-        <p>The Application incorporates Artificial Intelligence (AI) technologies to provide certain features or
-            services. By using the Application, you acknowledge and agree that AI may be used to process data and
-            deliver functionalities. The Service Provider ensures that all AI usage complies with applicable laws and is
-            designed to benefit the user experience.</p><br>
+    <div class="container">
+        <h1>Terms &amp; Conditions</h1>
+        <p class="effective-date">Last Updated & Effective Date: August 19, 2026</p>
+
+        <p>Welcome to <strong>Creativix</strong>! These Terms and Conditions (the "Terms") constitute a legally binding agreement between you and <strong>Neural Wave</strong> ("Service Provider", "we", "us", or "our") governing your access to and use of the Creativix mobile application and its associated features (the "Application").</p>
+
+        <p>By downloading, accessing, or utilizing the Application, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree, please discontinue using the Application immediately.</p>
+
+        <h2>1. Intellectual Property & License</h2>
+        <p>The Application, including its source code, UI/UX design, visual assets, trademarks, logos, algorithms, and software, is the exclusive intellectual property of the Service Provider and is protected by international copyright and intellectual property laws.</p>
+        <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the Application for personal or commercial creative purposes in accordance with these Terms. You agree not to:</p>
+        <ul>
+            <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the Application.</li>
+            <li>Modify, copy, adapt, create derivative works of, or distribute any part of the Application without prior written consent.</li>
+            <li>Bypass or attempt to disable any security features, licensing mechanisms, or rate limits.</li>
+        </ul>
+
+        <h2>2. Artificial Intelligence Services & Content Ownership</h2>
+
+        <h3>A. Input Content (Prompts & Uploads)</h3>
+        <p>You retain all rights and ownership of the text, prompts, images, or media files that you submit to the Application ("Input"). You represent and warrant that you have all necessary rights, licenses, and permissions to provide such Input and that it does not infringe upon any third-party intellectual property or privacy rights.</p>
+
+        <h3>B. Generated Content (AI Output)</h3>
+        <p>To the fullest extent permitted by applicable law, you own the content generated by the AI in response to your Inputs ("Output"). You are permitted to use your generated Output for personal, non-commercial, and commercial purposes, provided your use complies with these Terms.</p>
+        <p><strong>Similarity of Output:</strong> Due to the probabilistic nature of machine learning models, outputs may not be unique across different users. Similar or identical prompts submitted by other users may yield identical or similar results.</p>
+
+        <h2>3. Prohibited Uses & Acceptable Use Policy</h2>
+        <p>You agree not to use Creativix to generate, upload, process, or disseminate any content that:</p>
+        <ul>
+            <li>Is unlawful, harmful, defamatory, obscene, pornographic, or depicts Child Sexual Abuse Material (CSAM).</li>
+            <li>Promotes violence, terrorism, illegal acts, or the manufacturing of dangerous weapons or illegal substances.</li>
+            <li>Incites hatred, discrimination, harassment, or bigotry based on race, religion, gender, sexual orientation, disability, or nationality.</li>
+            <li>Generates non-consensual deepfakes, impersonates real individuals or entities deceitfully, or propagates malicious disinformation.</li>
+            <li>Violates privacy rights, copyrights, patents, trademarks, or trade secrets of any individual or entity.</li>
+            <li>Involves automated scraping, headless bots, API exploitation, or distributed denial of service (DoS) attacks.</li>
+        </ul>
+        <p>Violation of these rules may result in immediate suspension or permanent termination of your account without notice or refund.</p>
+
+        <h2>4. In-App Purchases, Premium Passes, and Virtual Credits</h2>
+
+        <h3>A. Consumable Premium Passes</h3>
+        <p>Creativix offers consumable Premium access packages (e.g., 1-day, 7-day, 30-day, and 365-day passes). <strong>These packages are consumable and non-recurring (no automatic renewal).</strong> Each purchase grants Premium access for the designated number of days from the date of activation or stacks onto your existing Premium duration.</p>
+
+        <h3>B. Virtual Credits</h3>
+        <p>The Application may offer or grant virtual credits ("Credits") for generating media in the AI Studio. Credits are digital items with no monetary value outside the Application. Credits are non-transferable, non-exchangeable for fiat currency, and cannot be refunded once purchased.</p>
+
+        <h3>C. Billing and Payments</h3>
+        <p>All in-app purchases are processed exclusively by <strong>Apple App Store</strong> (for iOS users) or <strong>Google Play Store</strong> (for Android users) under their respective payment terms. Prices are displayed clearly before purchase and may vary by region or tax jurisdiction.</p>
+
+        <h3>D. Refund Policy</h3>
+        <p>Since all payments are processed directly by platform store operators, <strong>all refund requests must be submitted directly to Apple or Google Play:</strong></p>
+        <ul>
+            <li>For iOS / Apple: Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</li>
+            <li>For Android / Google Play: Follow Google Play refund guidelines via the Google Play Help Center.</li>
+        </ul>
+        <p>Except as required by applicable mandatory consumer laws, all purchases are final and non-refundable. If you delete your account or your account is terminated due to violation of these Terms, unused Premium days and Credits will be forfeited.</p>
+
+        <h2>5. Automated Data Retention & Deletion</h2>
+        <p>To ensure system efficiency and privacy, the Application automatically clears historical user data on a rolling basis:</p>
+        <ul>
+            <li><strong>Chatbot History:</strong> Conversation history and messages are purged after <strong>30 days</strong>.</li>
+            <li><strong>Studio Output Media:</strong> Generated images and videos are deleted from server storage after <strong>7 days</strong>.</li>
+        </ul>
+        <p>You are responsible for exporting or saving important generated content to your local device storage prior to the scheduled cleanup.</p>
+
+        <h2>6. Fair Use & Account Integrity</h2>
+        <p>All high-capacity or unlimited features are provided strictly for interactive, human-directed creative workflows. We reserve the right to monitor system traffic, apply algorithmic rate limits, or suspend accounts engaging in abusive behavior, batch-scripting, or automated continuous querying.</p>
+
+        <h2>7. AI Technology Disclaimer & Limitation of Liability</h2>
+        <div class="highlight-box">
+            <p><strong>IMPORTANT DISCLAIMER:</strong> Artificial Intelligence is an evolving technology. AI-generated outputs may occasionally be inaccurate, incomplete, biased, or inconsistent. Creativix does NOT provide professional legal, medical, health, or financial advice. You are solely responsible for evaluating and verifying the accuracy and appropriateness of any Output before relying on or publishing it.</p>
+        </div>
+        <p>THE APPLICATION IS PROVIDED ON AN <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong> BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY LAW, NEURAL WAVE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF OR INABILITY TO USE THE APPLICATION.</p>
+
+        <h2>8. Connectivity, Updates, and Service Availability</h2>
+        <p>Using certain features requires a stable internet connection. You are responsible for any data carrier charges incurred while using the Application. We reserve the right to modify, update, patch, or temporarily suspend the Application (or parts thereof) for maintenance or improvements at our discretion.</p>
+
+        <h2>9. Account Termination</h2>
+        <p>You may terminate these Terms at any time by deleting your account via <strong>Settings &rarr; Account &rarr; Delete Account</strong> and uninstalling the Application. We reserve the right to suspend or terminate your access immediately if you violate these Terms, engage in fraud, or misuse our services.</p>
+
+        <h2>10. Governing Law</h2>
+        <p>These Terms shall be governed by and construed in accordance with the applicable laws, without regard to its conflict of law principles.</p>
+
+        <h2>11. Modifications to Terms</h2>
+        <p>We may update these Terms periodically. Any revisions will take effect upon posting the updated Terms on this page. Your continued use of the Application after revisions are posted signifies your binding agreement to the updated Terms.</p>
+
+        <h2>12. Contact Information</h2>
+        <p>If you have any questions, feedback, or legal inquiries regarding these Terms and Conditions, please reach out to us at:</p>
+        <p><strong>Neural Wave</strong><br>
+        Email: <a href="mailto:neuralwavescience@gmail.com">neuralwavescience@gmail.com</a></p>
     </div>
-    <p>The Service Provider may wish to update the application at some point. The application is currently available as
-        per the requirements for the operating system (and for any additional systems they decide to extend the
-        availability of the application to) may change, and you will need to download the updates if you want to
-        continue using the application. The Service Provider does not guarantee that it will always update the
-        application so that it is relevant to you and/or compatible with the particular operating system version
-        installed on your device. However, you agree to always accept updates to the application when offered to you.
-        The Service Provider may also wish to cease providing the application and may terminate its use at any time
-        without providing termination notice to you. Unless they inform you otherwise, upon any termination, (a) the
-        rights and licenses granted to you in these terms will end; (b) you must cease using the application, and (if
-        necessary) delete it from your device.</p><br><strong>Data Retention</strong>
-    <p>The Application employs an automatic data cleanup mechanism to protect your privacy and optimize our systems. Created data from Chatbot is automatically deleted after 30 days, and created data from Studio is automatically deleted after 7 days. By using the Application, you acknowledge and agree to this automatic data deletion policy.</p><br><strong>Changes to These Terms and Conditions</strong>
-    <p>The Service Provider may periodically update their Terms and Conditions. Therefore, you are advised to review
-        this page regularly for any changes. The Service Provider will notify you of any changes by posting the new
-        Terms and Conditions on this page.</p><br>
-    <p>These terms and conditions are effective as of 2026-04-16</p><br><strong>Contact Us</strong>
-    <p>If you have any questions or suggestions about the Terms and Conditions, please do not hesitate to contact the
-        Service Provider at neuralwavescience@gmail.com.</p>
 </body>
 
 </html>
